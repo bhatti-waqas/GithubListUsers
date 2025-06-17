@@ -2,6 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AppConfig</key>
+	<dict>
+		<key>personalAccessToken</key>
+		<string>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</string>
+		<key>apiBaseURL</key>
+		<string>https://api.github.com</string>
+	</dict>
+	<key>CFBundleIdentifier</key>
+	<string></string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

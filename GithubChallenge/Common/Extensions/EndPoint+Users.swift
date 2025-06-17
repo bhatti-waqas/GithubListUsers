@@ -6,19 +6,15 @@
 //
 
 import Networking
-
-struct Config {
-    // To-Do need to keep this token into plist file
-    static let token: String = "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"
-}
+import Utils
 
 extension Endpoint {
     
-    static let baseUrl = "https://api.github.com"
+    static let baseUrl = AppConfig.Keys.apiBaseURL.stringValue
     static func users() -> Self {
         .init(baseURL: baseUrl,
               path: "/users",
-              headers: ["Authorization": "Bearer \(Config.token)"]
+              headers: ["Authorization": "Bearer \(AppConfig.Keys.personalAccessToken.stringValue)"]
         )
     }
 }

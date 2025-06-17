@@ -36,6 +36,7 @@
 		1871EEBA2E00C74600BEDD99 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1871EEB92E00C74600BEDD99 /* UIImageView.swift */; };
 		1894B9652E01701E00AC97DA /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1894B9642E01701E00AC97DA /* SDWebImage */; };
 		1894B9672E01774F00AC97DA /* EndPoint+Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894B9662E01774F00AC97DA /* EndPoint+Users.swift */; };
+		1894B96B2E01C5C500AC97DA /* Utils in Frameworks */ = {isa = PBXBuildFile; productRef = 1894B96A2E01C5C500AC97DA /* Utils */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 				1871EE9D2E00AD9200BEDD99 /* Coordinator in Frameworks */,
 				1871EEA32E00AD9B00BEDD99 /* Networking in Frameworks */,
 				1871EE9F2E00AD9500BEDD99 /* DesignSystem in Frameworks */,
+				1894B96B2E01C5C500AC97DA /* Utils in Frameworks */,
 				1871EEA52E00AE1900BEDD99 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +344,7 @@
 				1871EEA22E00AD9B00BEDD99 /* Networking */,
 				1871EEA42E00AE1900BEDD99 /* SnapKit */,
 				1894B9642E01701E00AC97DA /* SDWebImage */,
+				1894B96A2E01C5C500AC97DA /* Utils */,
 			);
 			productName = GithubChallenge;
 			productReference = 181F87D62E00A3AD004FB8EF /* GithubChallenge.app */;
@@ -772,6 +775,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1894B9632E016DDF00AC97DA /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
+		};
+		1894B96A2E01C5C500AC97DA /* Utils */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Utils;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
