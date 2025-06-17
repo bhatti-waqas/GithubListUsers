@@ -1,8 +1,5 @@
 
-
-import Foundation
 import Networking
-import UIKit
 
 let ServiceLocator = AppServiceLocator.shared
 
@@ -13,7 +10,17 @@ final class AppServiceLocator {
     static let shared = AppServiceLocator()
     
     // MARK: - private Property
-    private let usersUseCase: GithubUserUseCase
+    
+    private lazy var networkService: NetworkService = {
+        NetworkService()
+    }()
+    
+    private lazy var usersUseCase: GithubUserUseCase = {
+        DefaultUsersUseCase(networkService: networkService)
+    }()
+    
+    //private lazy var userDetailsUseCase: 
+    
     
     // MARK: - Init
     private init() {
@@ -22,7 +29,11 @@ final class AppServiceLocator {
         usersUseCase =  DefaultUsersUseCase(networkService: networkService)
     }
     
-    func userListViewControllersFactory() -> UserListViewControllerFactory {
-        UserListViewControllerFactory(usersUseCase: usersUseCase)
+    func listUsersViewControllersFactory() -> ListUsersViewControllerFactory {
+        ListUsersViewControllerFactory(usersUseCase: usersUseCase)
+    }
+    
+    func detailsViewControllerFactory() -> DetailsViewControllerFactory {
+        DetailsViewControllerFactory()
     }
 }

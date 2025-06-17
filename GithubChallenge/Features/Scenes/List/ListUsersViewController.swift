@@ -39,6 +39,7 @@ private extension ListUsersViewController {
     
     func configureUI() {
         title = viewModel.screenTitle
+        ui.tableView.delegate = self
     }
     
     func bindViewModel() {
@@ -69,7 +70,6 @@ private extension ListUsersViewController {
     func endLoading() {
         ui.spinner.stopAnimating()
     }
-    
 }
 
 // MARK: - TableView Diffable DataSource
@@ -79,7 +79,7 @@ extension ListUsersViewController {
         case users
     }
     
-    private func makeDataSource() -> UITableViewDiffableDataSource<Section, User> {
+    private func makeDataSource() -> UITableViewDiffableDataSource<Section, UserRowViewModel> {
         return UITableViewDiffableDataSource(
             tableView: ui.tableView,
             cellProvider: { tableView, indexPath, user in
@@ -88,12 +88,19 @@ extension ListUsersViewController {
                 return cell
             })
     }
-    /// We only need to show items as our model is struc /  value type
+    /// We only need to show items as our model is struct/  value type
     /// it creates new instances so no need to update just need to insert new ones.
-    private func show(users: [User]) {
-        var snapshot = NSDiffableDataSourceSnapshot<Section, User>()
+    private func show(users: [UserRowViewModel]) {
+        var snapshot = NSDiffableDataSourceSnapshot<Section, UserRowViewModel>()
         snapshot.appendSections(Section.allCases)
         snapshot.appendItems(users, toSection: .users)
         dataSource.apply(snapshot, animatingDifferences: false)
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension ListUsersViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.showDetails(at: indexPath.row)
     }
 }

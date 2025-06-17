@@ -37,9 +37,9 @@ final class UserCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(with user: User) {
+    func configure(with user: UserRowViewModel) {
         nameLabel.text = user.login
-        iconView.setImage(with: user.avatarURL)
+        iconView.setImage(with: user.imageUrl)
     }
 }
 // MARK: - Private Methods

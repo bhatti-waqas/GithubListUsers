@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct User: Decodable, Hashable {
+struct User: Decodable {
+    
     let id: Int
     let login: String
     let avatarUrl: String
@@ -22,9 +23,5 @@ struct User: Decodable, Hashable {
     
     static func mock() -> User {
         .init(id: 1, login: "Bhatti", avatarUrl: "https://avatars.githubusercontent.com/u/5?v=4", reposUrl: "https://api.github.com/users/ezmobius/repos")
-    }
-    
-    var avatarURL: URL {
-        URL(string: avatarUrl)!
     }
 }

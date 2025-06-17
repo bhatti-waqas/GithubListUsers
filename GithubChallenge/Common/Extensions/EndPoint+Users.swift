@@ -17,4 +17,11 @@ extension Endpoint {
               //headers: ["Authorization": "Bearer \(AppConfig.Keys.personalAccessToken.stringValue)"]
         )
     }
+    
+    static func user(with id: String) -> Self {
+        .init(baseURL: baseUrl,
+              path: "/user",
+              queryItems: [.init(name: "", value: id)]
+        )
+    }
 }
