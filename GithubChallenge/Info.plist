@@ -4,8 +4,6 @@
 <dict>
 	<key>AppConfig</key>
 	<dict>
-		<key>personalAccessToken</key>
-		<string>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</string>
 		<key>apiBaseURL</key>
 		<string>https://api.github.com</string>
 	</dict>

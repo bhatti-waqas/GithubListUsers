@@ -13,8 +13,8 @@ extension Endpoint {
     static let baseUrl = AppConfig.Keys.apiBaseURL.stringValue
     static func users() -> Self {
         .init(baseURL: baseUrl,
-              path: "/users",
-              headers: ["Authorization": "Bearer \(AppConfig.Keys.personalAccessToken.stringValue)"]
+              path: "/users"
+              //headers: ["Authorization": "Bearer \(AppConfig.Keys.personalAccessToken.stringValue)"]
         )
     }
 }
