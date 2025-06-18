@@ -18,7 +18,8 @@ final class UserDetailsCoordinator: BaseCoordinator<AppNavigationController> {
     }
     
     override func start() {
-        let detailsViewController = UIViewController() //ArticleDetailsViewControllerFactory.makeArticleDetailsViewController(wit: detailRow)
+        let factory = ServiceLocator.detailsViewControllerFactory()
+        let detailsViewController = factory.makeDetailsViewController(wit: id)
         rootViewController.pushViewController(detailsViewController, animated: true)
     }
 }

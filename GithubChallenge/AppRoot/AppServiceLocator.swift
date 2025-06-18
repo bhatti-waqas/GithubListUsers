@@ -19,21 +19,15 @@ final class AppServiceLocator {
         DefaultUsersUseCase(networkService: networkService)
     }()
     
-    //private lazy var userDetailsUseCase: 
-    
-    
-    // MARK: - Init
-    private init() {
-        /// Register dependencies
-        let networkService: NetworkService = NetworkService()
-        usersUseCase =  DefaultUsersUseCase(networkService: networkService)
-    }
+    private lazy var userDetailsUseCase: UserDetailsUseCase = {
+        DefaultUserDetailsUseCase(networkService: networkService)
+    }()
     
     func listUsersViewControllersFactory() -> ListUsersViewControllerFactory {
         ListUsersViewControllerFactory(usersUseCase: usersUseCase)
     }
     
     func detailsViewControllerFactory() -> DetailsViewControllerFactory {
-        DetailsViewControllerFactory()
+        DetailsViewControllerFactory(detailsUseCase: userDetailsUseCase)
     }
 }

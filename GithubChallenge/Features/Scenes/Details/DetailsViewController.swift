@@ -6,10 +6,94 @@
 //
 
 import UIKit
-
+import Combine
 final class DetailsViewController: UIViewController {
 
+    // MARK: - Private Properties
+    private lazy var dataSource = makeDataSource()
+    private let ui = DetailsUI()
+    private let viewModel: DetailsViewModel
+    private var bindingCancellable: AnyCancellable?
+    
+    init(with viewModel: DetailsViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        ui.layout(in: self)
+        configureUI()
+        bindViewModel()
+        viewModel.fetchUsersTriggered()
+    }
+}
+
+// MARK: - Private Methods
+private extension DetailsViewController {
+    
+    func configureUI() {
+        title = viewModel.screenTitle
+    }
+    
+    func bindViewModel() {
+        bindingCancellable = viewModel.$viewState.sink { [weak self] viewState in
+            self?.render(viewState)
+        }
+    }
+    
+    func render(_ state: DetailsViewState) {
+        switch state {
+        case .idle:
+            beginLoading()
+        case .loading:
+            beginLoading()
+        case let .showMessageWithTitle(message):
+            endLoading()
+            presentAlert(message)
+        case .showUser(let user):
+            endLoading()
+            show(user: user)
+        }
+    }
+    
+    func beginLoading() {
+        ui.spinner.startAnimating()
+    }
+    
+    func endLoading() {
+        ui.spinner.stopAnimating()
+    }
+}
+
+// MARK: - TableView Diffable DataSource
+extension DetailsViewController {
+    
+    enum Section: CaseIterable {
+        case userDetails
+        case repositories
+    }
+    
+    private func makeDataSource() -> UITableViewDiffableDataSource<Section, UserDetailsRowViewModel> {
+        return UITableViewDiffableDataSource(
+            tableView: ui.tableView,
+            cellProvider: { tableView, indexPath, user in
+                let cell: DetailsUserCell = tableView.dequeue(for: indexPath)
+                cell.configure(with: user)
+                return cell
+            })
+    }
+    /// We only need to show items as our model is struct/  value type
+    /// it creates new instances so no need to update just need to insert new ones.
+    private func show(user: UserDetailsRowViewModel) {
+        var snapshot = NSDiffableDataSourceSnapshot<Section, UserDetailsRowViewModel>()
+        snapshot.appendSections(Section.allCases)
+        snapshot.appendItems([user], toSection: .userDetails)
+        //snapshot.appendItems(users, toSection: .userDetails)
+        dataSource.apply(snapshot, animatingDifferences: false)
     }
 }

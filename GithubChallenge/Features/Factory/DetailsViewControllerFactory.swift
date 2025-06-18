@@ -8,16 +8,14 @@
 final class DetailsViewControllerFactory {
     
     // MARK: - Private Properties
-    private let usersUseCase: UserDetailsUseCase
+    private let detailsUseCase: UserDetailsUseCase
     
-    init(usersUseCase: UserDetailsUseCase) {
-        self.usersUseCase = usersUseCase
+    init(detailsUseCase: UserDetailsUseCase) {
+        self.detailsUseCase = detailsUseCase
     }
     
-    static func makeDetailsViewController(wit id: Int) -> DetailsViewController {
-        
-        //let listUsersViewController = ListUsersViewController(with: viewModel)
-        //return listUsersViewController
-        return DetailsViewController()
+    func makeDetailsViewController(wit id: Int) -> DetailsViewController {
+        let viewModel = DetailsViewModel(useCase: detailsUseCase)
+        return DetailsViewController(with: viewModel)
     }
 }
