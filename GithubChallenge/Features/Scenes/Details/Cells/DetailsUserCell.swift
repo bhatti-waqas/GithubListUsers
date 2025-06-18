@@ -63,6 +63,7 @@ private extension DetailsUserCell {
     func addSubViews() {
         contentView.addSubview(containerView)
         containerView.addSubview(iconView)
+        containerView.addSubview(verticalStackView)
         [nameLabel, starLabel].forEach(verticalStackView.addArrangedSubview)
         //[nameLabel, iconView].forEach(containerView.addSubview)
     }
