@@ -17,6 +17,8 @@
 		185FC7C92E03511D00C0772B /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FC7C82E03511D00C0772B /* RepositoryCell.swift */; };
 		185FC7CB2E03536F00C0772B /* UserDetailsRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FC7CA2E03536F00C0772B /* UserDetailsRowViewModel.swift */; };
 		185FC7CD2E03548100C0772B /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FC7CC2E03548100C0772B /* DetailsViewModel.swift */; };
+		185FC7CF2E04676C00C0772B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FC7CE2E04676C00C0772B /* Repository.swift */; };
+		185FC7D12E04682500C0772B /* RepositoryRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FC7D02E04682500C0772B /* RepositoryRowViewModel.swift */; };
 		1871EE7C2E00A44B00BEDD99 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1871EE7B2E00A44B00BEDD99 /* AppCoordinator.swift */; };
 		1871EE7E2E00A45200BEDD99 /* AppServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1871EE7D2E00A45200BEDD99 /* AppServiceLocator.swift */; };
 		1871EE852E00A52500BEDD99 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1871EE842E00A52500BEDD99 /* Strings.swift */; };
@@ -74,6 +76,8 @@
 		185FC7C82E03511D00C0772B /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		185FC7CA2E03536F00C0772B /* UserDetailsRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsRowViewModel.swift; sourceTree = "<group>"; };
 		185FC7CC2E03548100C0772B /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		185FC7CE2E04676C00C0772B /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		185FC7D02E04682500C0772B /* RepositoryRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRowViewModel.swift; sourceTree = "<group>"; };
 		1871EE7B2E00A44B00BEDD99 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		1871EE7D2E00A45200BEDD99 /* AppServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppServiceLocator.swift; sourceTree = "<group>"; };
 		1871EE842E00A52500BEDD99 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -179,6 +183,7 @@
 			children = (
 				185FC7CA2E03536F00C0772B /* UserDetailsRowViewModel.swift */,
 				185FC7CC2E03548100C0772B /* DetailsViewModel.swift */,
+				185FC7D02E04682500C0772B /* RepositoryRowViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				1871EE992E00AD2300BEDD99 /* User.swift */,
+				185FC7CE2E04676C00C0772B /* Repository.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -496,6 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185FC7CF2E04676C00C0772B /* Repository.swift in Sources */,
 				1871EE9A2E00AD2300BEDD99 /* User.swift in Sources */,
 				1894B9772E01F8F900AC97DA /* DetailsViewController.swift in Sources */,
 				1871EE932E00A7A000BEDD99 /* BaseUI.swift in Sources */,
@@ -522,6 +529,7 @@
 				1871EE852E00A52500BEDD99 /* Strings.swift in Sources */,
 				1871EE952E00A84300BEDD99 /* ListUsersViewControllerFactory.swift in Sources */,
 				1894B9742E01F8AC00AC97DA /* DetailsViewControllerFactory.swift in Sources */,
+				185FC7D12E04682500C0772B /* RepositoryRowViewModel.swift in Sources */,
 				181F87DC2E00A3AD004FB8EF /* SceneDelegate.swift in Sources */,
 				1871EEB62E00C26800BEDD99 /* DefaultUsersUseCase.swift in Sources */,
 				1894B97C2E01FAF000AC97DA /* DefaultUserDetailsUseCase.swift in Sources */,

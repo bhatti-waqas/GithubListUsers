@@ -15,7 +15,7 @@ final class DetailsViewControllerFactory {
     }
     
     func makeDetailsViewController(wit id: Int) -> DetailsViewController {
-        let viewModel = DetailsViewModel(useCase: detailsUseCase)
+        let viewModel = DetailsViewModel(useCase: detailsUseCase, userId: id)
         return DetailsViewController(with: viewModel)
     }
 }

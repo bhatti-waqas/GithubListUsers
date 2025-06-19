@@ -9,4 +9,5 @@ import Foundation
 
 protocol UserDetailsUseCase {
     func fetchDetails(with id: Int) async throws -> User
+    func fetchRepositories(with userName: String) async throws -> [Repository]
 }

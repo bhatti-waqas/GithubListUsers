@@ -21,7 +21,11 @@ final class DefaultUserDetailsUseCase {
 extension DefaultUserDetailsUseCase: UserDetailsUseCase {
     
     func fetchDetails(with id: Int) async throws -> User {
-        return User.mock()
+        try await networkService.request(with: .user(with: id))
+    }
+    
+    func fetchRepositories(with userName: String) async throws -> [Repository] {
+        try await networkService.request(with: .repositories(with: userName))
     }
 }
 

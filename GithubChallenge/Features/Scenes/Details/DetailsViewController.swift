@@ -29,7 +29,7 @@ final class DetailsViewController: UIViewController {
         ui.layout(in: self)
         configureUI()
         bindViewModel()
-        viewModel.fetchUsersTriggered()
+        viewModel.fetchUserTriggered()
     }
 }
 
@@ -55,9 +55,9 @@ private extension DetailsViewController {
         case let .showMessageWithTitle(message):
             endLoading()
             presentAlert(message)
-        case .showUser(let user):
+        case .showUser(let user, let repos):
             endLoading()
-            show(user: user)
+            show(user: user, repos: repos)
         }
     }
     
@@ -78,22 +78,33 @@ extension DetailsViewController {
         case repositories
     }
     
-    private func makeDataSource() -> UITableViewDiffableDataSource<Section, UserDetailsRowViewModel> {
+    private func makeDataSource() -> UITableViewDiffableDataSource<Section, TableItem> {
         return UITableViewDiffableDataSource(
             tableView: ui.tableView,
-            cellProvider: { tableView, indexPath, user in
-                let cell: DetailsUserCell = tableView.dequeue(for: indexPath)
-                cell.configure(with: user)
-                return cell
+            cellProvider: { tableView, indexPath, item in
+                //let cell: DetailsUserCell = tableView.dequeue(for: indexPath)
+                //cell.configure(with: user)
+                switch item {
+                case .user(let userDetails):
+                    let cell: DetailsUserCell = tableView.dequeue(for: indexPath)
+                    cell.configure(with: userDetails)
+                    return cell
+                case .repository(let repository):
+                    let cell: RepositoryCell = tableView.dequeue(for: indexPath)
+                    cell.configure(with: repository)
+                    return cell
+                }
             })
     }
     /// We only need to show items as our model is struct/  value type
     /// it creates new instances so no need to update just need to insert new ones.
-    private func show(user: UserDetailsRowViewModel) {
-        var snapshot = NSDiffableDataSourceSnapshot<Section, UserDetailsRowViewModel>()
+    private func show(user: UserDetailsRowViewModel,
+                      repos: [RepositoryRowViewModel]) {
+        var snapshot = NSDiffableDataSourceSnapshot<Section, TableItem>()
         snapshot.appendSections(Section.allCases)
-        snapshot.appendItems([user], toSection: .userDetails)
-        //snapshot.appendItems(users, toSection: .userDetails)
+        snapshot.appendItems([.user(user)], toSection: .userDetails)
+//        snapshot.appendItems(.repository(repos), toSection: .repositories)
+        snapshot.appendItems(repos.map { .repository($0) }, toSection: .repositories)
         dataSource.apply(snapshot, animatingDifferences: false)
     }
 }

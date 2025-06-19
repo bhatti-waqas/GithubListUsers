@@ -11,17 +11,21 @@ import Utils
 extension Endpoint {
     
     static let baseUrl = AppConfig.Keys.apiBaseURL.stringValue
+    
     static func users() -> Self {
         .init(baseURL: baseUrl,
               path: "/users"
-              //headers: ["Authorization": "Bearer \(AppConfig.Keys.personalAccessToken.stringValue)"]
         )
     }
     
-    static func user(with id: String) -> Self {
+    static func user(with id: Int) -> Self {
         .init(baseURL: baseUrl,
-              path: "/user",
-              queryItems: [.init(name: "", value: id)]
+              path: "/user/\(id)"
         )
+    }
+    
+    static func repositories(with username: String) -> Self {
+        .init(baseURL: baseUrl,
+              path: "users/\(username)/repos")
     }
 }

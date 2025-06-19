@@ -40,9 +40,9 @@ final class RepositoryCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(with user: UserRowViewModel) {
-        nameLabel.text = user.login
-        iconView.setImage(with: user.imageUrl)
+    func configure(with repo: RepositoryRowViewModel) {
+        nameLabel.text = repo.name
+        //iconView.setImage(with: user.imageUrl)
     }
 }
 // MARK: - Private Methods

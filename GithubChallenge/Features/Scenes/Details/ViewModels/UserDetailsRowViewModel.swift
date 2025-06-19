@@ -13,6 +13,10 @@ struct UserDetailsRowViewModel: Hashable {
     let login: String
     let avatarUrl: String
     let reposUrl: String
+    let name: String
+    let company: String
+    let blog: String
+    let location: String
     
     var imageUrl: URL? {
         URL(string: avatarUrl)
@@ -23,5 +27,10 @@ struct UserDetailsRowViewModel: Hashable {
         self.login = user.login
         self.avatarUrl = user.avatarUrl
         self.reposUrl = user.reposUrl
+        self.name = user.name ?? ""
+        self.company = user.company ?? ""
+        self.blog = user.blog ?? ""
+        self.location = user.location ?? ""
+        
     }
 }

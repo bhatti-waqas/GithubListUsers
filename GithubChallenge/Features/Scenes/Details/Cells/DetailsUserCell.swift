@@ -30,9 +30,15 @@ final class DetailsUserCell: UITableViewCell {
     
     
     
-    private lazy var starLabel: UILabel = {
+    private lazy var companyLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(.avenirDemiBold, size: .standard(.h3))
+        label.font = UIFont(.avenirRegular, size: .standard(.h4))
+        return label
+    }()
+    
+    private lazy var locationLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(.avenirRegular, size: .standard(.h4))
         return label
     }()
     
@@ -53,8 +59,10 @@ final class DetailsUserCell: UITableViewCell {
     }
     
     func configure(with user: UserDetailsRowViewModel) {
-        nameLabel.text = user.login
+        nameLabel.text = user.name
         iconView.setImage(with: user.imageUrl)
+        companyLabel.text = user.company
+        locationLabel.text = user.location
     }
 }
 // MARK: - Private Methods
@@ -64,8 +72,7 @@ private extension DetailsUserCell {
         contentView.addSubview(containerView)
         containerView.addSubview(iconView)
         containerView.addSubview(verticalStackView)
-        [nameLabel, starLabel].forEach(verticalStackView.addArrangedSubview)
-        //[nameLabel, iconView].forEach(containerView.addSubview)
+        [nameLabel, companyLabel, locationLabel].forEach(verticalStackView.addArrangedSubview)
     }
     
     func setupConstraints() {
@@ -79,12 +86,7 @@ private extension DetailsUserCell {
             make.height.equalTo(iconView.snp.width)
             make.centerY.equalToSuperview()
         }
-        
-//        nameLabel.snp.makeConstraints { make in
-//            make.leading.equalTo(iconView.snp.trailing).offset(10)
-//            make.top.bottom.equalToSuperview().inset(10)
-//        }
-        
+                
         verticalStackView.snp.makeConstraints { make in
             make.leading.equalTo(iconView.snp.trailing).offset(10)
             make.top.bottom.equalToSuperview().inset(10)
