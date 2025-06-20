@@ -14,6 +14,7 @@ struct Repository: Decodable {
     let starGazersCount: Int?
     let description: String?
     let fork: Bool
+    let htmlUrl: String
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -22,5 +23,6 @@ struct Repository: Decodable {
         case description
         case fork
         case starGazersCount = "stargazers_count"
+        case htmlUrl = "html_url"
     }
 }

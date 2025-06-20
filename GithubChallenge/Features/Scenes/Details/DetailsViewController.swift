@@ -38,6 +38,7 @@ private extension DetailsViewController {
     
     func configureUI() {
         title = viewModel.screenTitle
+        ui.tableView.delegate = self
     }
     
     func bindViewModel() {
@@ -67,6 +68,15 @@ private extension DetailsViewController {
     
     func endLoading() {
         ui.spinner.stopAnimating()
+    }
+}
+
+// MARK: - TableView Delegate
+extension DetailsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let section = Section(rawValue: indexPath.section) else { return }
+        guard section == .repositories else { return }
+        viewModel.openUrlInBrowser(index: indexPath.row)
     }
 }
 

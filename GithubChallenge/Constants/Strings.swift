@@ -29,7 +29,7 @@ enum GenericStrings: String, StringKey {
     case detailsScreenTitle = "key_screen_details_title"
     case ok = "key_ok"
     case followers = "key_followers"
-    case language = "key_language"
+    case language = "key_language_title"
     case stars = "key_stars"
 }
 

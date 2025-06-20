@@ -22,6 +22,7 @@ final class DetailsViewModel {
     
     private var fetchingTask: Task<Void, Never>?
     private let useCase: UserDetailsUseCase
+    private let coordinator: URLNavigator
     private let userId: Int
     var detailsRowViewModel: UserDetailsRowViewModel?
     var repositoryRowViewModels: [RepositoryRowViewModel] = []
@@ -29,9 +30,12 @@ final class DetailsViewModel {
     
     let screenTitle = StringKey.Generic.detailsScreenTitle.get()
     
-    init(useCase: UserDetailsUseCase, userId: Int) {
+    init(useCase: UserDetailsUseCase, 
+         userId: Int,
+         coordinator: URLNavigator) {
         self.useCase = useCase
         self.userId = userId
+        self.coordinator = coordinator
     }
     
     deinit {
@@ -40,6 +44,12 @@ final class DetailsViewModel {
     
     func fetchUserTriggered() {
         fetchUserDetails()
+    }
+    
+    func openUrlInBrowser(index: Int) {
+        let repo = repositoryRowViewModels[index]
+        guard let url = repo.url else { return }
+        coordinator.openURLInBroswer(with: url)
     }
 }
 // MARK: - Private methods

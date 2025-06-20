@@ -14,6 +14,7 @@ struct RepositoryRowViewModel: Hashable {
     let starGazersCount: Int
     let description: String
     let fork: Bool
+    let htmlUrl: String
     
     init(with repo: Repository) {
         self.id = repo.id
@@ -22,5 +23,10 @@ struct RepositoryRowViewModel: Hashable {
         self.starGazersCount = repo.starGazersCount ?? 0
         self.description = repo.description ?? ""
         self.fork = repo.fork
+        self.htmlUrl = repo.htmlUrl
+    }
+    
+    var url: URL? {
+        URL(string: htmlUrl)
     }
 }
