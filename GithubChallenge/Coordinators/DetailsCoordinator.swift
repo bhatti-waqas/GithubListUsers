@@ -36,4 +36,3 @@ extension UserDetailsCoordinator: URLNavigator {
         rootViewController.present(safariVC, animated: true)
     }
 }
-
