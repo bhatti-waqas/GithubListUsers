@@ -27,7 +27,7 @@ final class DetailsViewModel {
     var repositoryRowViewModels: [RepositoryRowViewModel] = []
     @Published private(set) var viewState: DetailsViewState = .idle
     
-    let screenTitle = StringKey.Generic.screenTitle.get()
+    let screenTitle = StringKey.Generic.detailsScreenTitle.get()
     
     init(useCase: UserDetailsUseCase, userId: Int) {
         self.useCase = useCase

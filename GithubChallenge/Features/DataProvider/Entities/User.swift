@@ -17,6 +17,7 @@ struct User: Decodable {
     let company: String?
     let blog: String?
     let location: String?
+    let followers: Int?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -27,6 +28,7 @@ struct User: Decodable {
         case company
         case blog
         case location
+        case followers
     }
     
     static func mock() -> User {
@@ -37,6 +39,7 @@ struct User: Decodable {
               name: "Waqas Naseem",
               company: "GitHub",
               blog: "https://github.com/blog",
-              location: "San Francisco")
+              location: "San Francisco",
+              followers: 100)
     }
 }

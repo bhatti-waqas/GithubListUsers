@@ -23,7 +23,7 @@ final class ListUsersViewModel {
     var userRowViewModels: [UserRowViewModel] = []
     @Published private(set) var viewState: ListUsersViewState = .idle
     
-    let screenTitle = StringKey.Generic.screenTitle.get()
+    let screenTitle = StringKey.Generic.listScreenTitle.get()
     
     init(useCase: GithubUserUseCase,
          coordinator: DetailsCoordinator) {

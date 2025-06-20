@@ -19,6 +19,7 @@
 		185FC7CD2E03548100C0772B /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FC7CC2E03548100C0772B /* DetailsViewModel.swift */; };
 		185FC7CF2E04676C00C0772B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FC7CE2E04676C00C0772B /* Repository.swift */; };
 		185FC7D12E04682500C0772B /* RepositoryRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FC7D02E04682500C0772B /* RepositoryRowViewModel.swift */; };
+		185FC7D32E05B65000C0772B /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 185FC7D22E05B65000C0772B /* Localizable.xcstrings */; };
 		1871EE7C2E00A44B00BEDD99 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1871EE7B2E00A44B00BEDD99 /* AppCoordinator.swift */; };
 		1871EE7E2E00A45200BEDD99 /* AppServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1871EE7D2E00A45200BEDD99 /* AppServiceLocator.swift */; };
 		1871EE852E00A52500BEDD99 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1871EE842E00A52500BEDD99 /* Strings.swift */; };
@@ -78,6 +79,7 @@
 		185FC7CC2E03548100C0772B /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		185FC7CE2E04676C00C0772B /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		185FC7D02E04682500C0772B /* RepositoryRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRowViewModel.swift; sourceTree = "<group>"; };
+		185FC7D22E05B65000C0772B /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		1871EE7B2E00A44B00BEDD99 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		1871EE7D2E00A45200BEDD99 /* AppServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppServiceLocator.swift; sourceTree = "<group>"; };
 		1871EE842E00A52500BEDD99 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			children = (
 				181F87E42E00A3AF004FB8EF /* LaunchScreen.storyboard */,
 				181F87E22E00A3AF004FB8EF /* Assets.xcassets */,
+				185FC7D22E05B65000C0772B /* Localizable.xcstrings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 181F87CD2E00A3AD004FB8EF;
 			packageReferences = (
@@ -485,6 +489,7 @@
 			files = (
 				181F87E62E00A3AF004FB8EF /* LaunchScreen.storyboard in Resources */,
 				181F87E32E00A3AF004FB8EF /* Assets.xcassets in Resources */,
+				185FC7D32E05B65000C0772B /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,9 +13,10 @@ import Extensions
 
 final class RepositoryCell: UITableViewCell {
     
-    private lazy var containerView: UIView = {
-        let view = UIView()
-        return view
+    private lazy var labelsStack: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        return stack
     }()
     
     private lazy var nameLabel: UILabel = {
@@ -24,9 +25,23 @@ final class RepositoryCell: UITableViewCell {
         return label
     }()
     
-    private lazy var iconView: UIImageView = {
-        let icon = UIImageView()
-        return icon
+    private lazy var developmentLanguageLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(.avenirRegular, size: .standard(.h3))
+        return label
+    }()
+    
+    private lazy var numberOfStarzLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(.avenirRegular, size: .standard(.h3))
+        return label
+    }()
+    
+    private lazy var descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.font = UIFont(.avenirRegular, size: .standard(.h3))
+        return label
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -42,32 +57,23 @@ final class RepositoryCell: UITableViewCell {
     
     func configure(with repo: RepositoryRowViewModel) {
         nameLabel.text = repo.name
-        //iconView.setImage(with: user.imageUrl)
+        
+        developmentLanguageLabel.text = "\(StringKey.Generic.language.get()) \(repo.language)"
+        numberOfStarzLabel.text = "\(StringKey.Generic.stars.get()) \(repo.starGazersCount)"
+        descriptionLabel.text = repo.description
     }
 }
 // MARK: - Private Methods
 private extension RepositoryCell {
     
     func addSubViews() {
-        contentView.addSubview(containerView)
-        [nameLabel, iconView].forEach(containerView.addSubview)
+        contentView.addSubview(labelsStack)
+        [nameLabel, developmentLanguageLabel, numberOfStarzLabel, descriptionLabel].forEach(labelsStack.addArrangedSubview)
     }
     
     func setupConstraints() {
-        containerView.snp.makeConstraints { make in
+        labelsStack.snp.makeConstraints { make in
             make.leading.trailing.top.bottom.equalToSuperview().inset(10)
-        }
-        
-        iconView.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(10)
-            make.width.equalTo(50)
-            make.height.equalTo(iconView.snp.width)
-            make.centerY.equalToSuperview()
-        }
-        
-        nameLabel.snp.makeConstraints { make in
-            make.leading.equalTo(iconView.snp.trailing).offset(10)
-            make.top.bottom.equalToSuperview().inset(10)
         }
     }
 }

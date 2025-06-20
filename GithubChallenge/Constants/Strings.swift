@@ -15,7 +15,7 @@ protocol StringKey {
 
 extension StringKey {
     func get(suffix: String? = nil) -> String {
-        return (rawValue + (suffix ?? "")).localize()
+        (rawValue + (suffix ?? "")).localize()
     }
 }
 
@@ -25,11 +25,12 @@ extension StringKey {
 }
 
 enum GenericStrings: String, StringKey {
-    case screenTitle = "key_screen_title"
-    case textFieldPlaceHolder = "key_text_field_placeholder"
-    case actionSheetTitle = "key_title_action_sheet"
-    case actionSheetMessage = "key_message_action_sheet"
+    case listScreenTitle = "key_screen_list_title"
+    case detailsScreenTitle = "key_screen_details_title"
     case ok = "key_ok"
+    case followers = "key_followers"
+    case language = "key_language"
+    case stars = "key_stars"
 }
 
 enum ErrorStrings: String, StringKey {

@@ -28,15 +28,13 @@ final class DetailsUserCell: UITableViewCell {
         return label
     }()
     
-    
-    
-    private lazy var companyLabel: UILabel = {
+    private lazy var userNameLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(.avenirRegular, size: .standard(.h4))
+        label.font = UIFont(.avenirDemiBold, size: .standard(.h3))
         return label
     }()
     
-    private lazy var locationLabel: UILabel = {
+    private lazy var numberOfFollowers: UILabel = {
         let label = UILabel()
         label.font = UIFont(.avenirRegular, size: .standard(.h4))
         return label
@@ -59,10 +57,10 @@ final class DetailsUserCell: UITableViewCell {
     }
     
     func configure(with user: UserDetailsRowViewModel) {
-        nameLabel.text = user.name
         iconView.setImage(with: user.imageUrl)
-        companyLabel.text = user.company
-        locationLabel.text = user.location
+        userNameLabel.text = user.login
+        nameLabel.text = user.name
+        numberOfFollowers.text = "\(StringKey.Generic.followers.get()) \(user.followers)"
     }
 }
 // MARK: - Private Methods
@@ -72,7 +70,7 @@ private extension DetailsUserCell {
         contentView.addSubview(containerView)
         containerView.addSubview(iconView)
         containerView.addSubview(verticalStackView)
-        [nameLabel, companyLabel, locationLabel].forEach(verticalStackView.addArrangedSubview)
+        [userNameLabel, nameLabel, numberOfFollowers].forEach(verticalStackView.addArrangedSubview)
     }
     
     func setupConstraints() {

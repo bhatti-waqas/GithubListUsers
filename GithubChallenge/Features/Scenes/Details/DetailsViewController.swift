@@ -73,7 +73,7 @@ private extension DetailsViewController {
 // MARK: - TableView Diffable DataSource
 extension DetailsViewController {
     
-    enum Section: CaseIterable {
+    enum Section: Int, CaseIterable {
         case userDetails
         case repositories
     }
@@ -82,8 +82,6 @@ extension DetailsViewController {
         return UITableViewDiffableDataSource(
             tableView: ui.tableView,
             cellProvider: { tableView, indexPath, item in
-                //let cell: DetailsUserCell = tableView.dequeue(for: indexPath)
-                //cell.configure(with: user)
                 switch item {
                 case .user(let userDetails):
                     let cell: DetailsUserCell = tableView.dequeue(for: indexPath)
@@ -100,10 +98,10 @@ extension DetailsViewController {
     /// it creates new instances so no need to update just need to insert new ones.
     private func show(user: UserDetailsRowViewModel,
                       repos: [RepositoryRowViewModel]) {
+        ui.tableView.isHidden = false
         var snapshot = NSDiffableDataSourceSnapshot<Section, TableItem>()
         snapshot.appendSections(Section.allCases)
         snapshot.appendItems([.user(user)], toSection: .userDetails)
-//        snapshot.appendItems(.repository(repos), toSection: .repositories)
         snapshot.appendItems(repos.map { .repository($0) }, toSection: .repositories)
         dataSource.apply(snapshot, animatingDifferences: false)
     }
