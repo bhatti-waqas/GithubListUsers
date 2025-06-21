@@ -25,4 +25,3 @@ final class ListUsersViewControllerFactory {
         return listUsersViewController
     }
 }
-

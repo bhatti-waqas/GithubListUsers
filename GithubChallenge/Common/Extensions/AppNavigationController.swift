@@ -28,4 +28,3 @@ final class AppNavigationController: UINavigationController {
              NSAttributedString.Key.font: UIFont(.avenirDemiBold, size: .standard(.h3))]
     }
 }
-

@@ -1,14 +1,13 @@
 //
-//  GithubChallengeTests.swift
+//  GithubUsersUseCaseTests.swift
 //  GithubChallengeTests
 //
-//  Created by apple on 17/06/2025.
+//  Created by apple on 21/06/2025.
 //
 
 import XCTest
-@testable import GithubChallenge
 
-final class GithubChallengeTests: XCTestCase {
+final class GithubUsersUseCaseTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

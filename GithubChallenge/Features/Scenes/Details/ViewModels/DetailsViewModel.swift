@@ -87,4 +87,3 @@ private extension DetailsViewModel {
         .init(with: repo)
     }
 }
-

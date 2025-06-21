@@ -28,4 +28,3 @@ extension DefaultUserDetailsUseCase: UserDetailsUseCase {
         try await networkService.request(with: .repositories(with: userName))
     }
 }
-

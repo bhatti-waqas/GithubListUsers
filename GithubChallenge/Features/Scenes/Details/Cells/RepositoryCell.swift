@@ -7,8 +7,6 @@
 
 import UIKit
 import SnapKit
-
-import UIKit
 import Extensions
 
 final class RepositoryCell: UITableViewCell {
@@ -77,4 +75,3 @@ private extension RepositoryCell {
         }
     }
 }
-

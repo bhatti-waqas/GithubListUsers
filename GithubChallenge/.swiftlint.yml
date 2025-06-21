@@ -1,0 +1,57 @@
+# By default, SwiftLint uses a set of sensible default rules you can adjust:
+disabled_rules: # rule identifiers turned on by default to exclude from running
+  - comma
+  - control_statement
+  - trailing_whitespace
+  - identifier_name
+  - shorthand_operator
+  - line_length
+  - function_body_length
+  - type_body_length
+  - file_length
+  - cyclomatic_complexity
+  - void_function_in_ternary
+  - implicit_getter
+  - discouraged_direct_init
+  - type_name
+  - block_based_kvo
+  - function_parameter_count
+  - force_cast
+  - compiler_protocol_init
+  - for_where
+  - inclusive_language
+  - large_tuple
+  - empty_enum_arguments
+opt_in_rules: # some rules are turned off by default, so you need to opt-in
+  - empty_count # Find all the available rules by running: `swiftlint rules`
+
+# Alternatively, specify all rules explicitly by uncommenting this option:
+# only_rules: # delete `disabled_rules` & `opt_in_rules` if using this
+#   - empty_parameters
+#   - vertical_whitespace
+
+included: # paths to include during linting. `--path` is ignored if present.
+  - iOSEvaluation
+  - iOSEvaluationTests
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+  - Source/ExcludedFolder
+  - Source/ExcludedFile.swift
+  - Source/*/ExcludedFile.swift # Exclude files with a wildcard
+analyzer_rules: # Rules run by `swiftlint analyze`
+  - explicit_self
+
+# configurable rules can be customized from this configuration file
+# binary rules can set their severity level
+force_try:
+  severity: warning # explicitly
+# rules that have both warning and error levels, can set just the warning level
+# implicitly
+# they can set both implicitly with an array
+
+# or they can set both explicitly
+# naming rules can set warnings/errors for min_length and max_length
+# additionally they can set excluded names
+
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, codeclimate, junit, html, emoji, sonarqube, markdown, github-actions-logging)
