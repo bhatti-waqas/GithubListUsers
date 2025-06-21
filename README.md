@@ -11,7 +11,7 @@ When user selects a userr from list display its Details screen.
 
 ### Enviroment
 - iOS Minimum 15.0
-- Xcode 15.0
+- Xcode 16.0
 - Swift 5.0.0+
 
 ### Dependencies
@@ -25,19 +25,22 @@ This project uses Swift Package Manager [SPM](https://swift.org/package-manager/
 
 ## Functionality
 
-- List of Characters
+- List of Users
 <br>
-<img src = "README Files/characters.png" width = 600>
+<img src = "README Files/list.png" width = 600>
 
-- Details of Character
+- Details of User
 <br>
-<img src = "README Files/characters-details.png" width = 600>
+<img src = "README Files/details.png" width = 600>
 
-## Covered Nice-to-haves
+- Repository in Browser
+<br>
+<img src = "README Files/browser.png" width = 600>
+
+## Nice-to-haves
 - Decoupled navigation
 - Unit testing
-- Offline support (Caching)
 
 ## Getting Started
 ### Getting the project
-- The project can be cloned from https://github.com/bhatti-waqas/kinzoo-ios-challenge.git
+- The project can be cloned from https://github.com/bhatti-waqas/GithubListUsers.git
