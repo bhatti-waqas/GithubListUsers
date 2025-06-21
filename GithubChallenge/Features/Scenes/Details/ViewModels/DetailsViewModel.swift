@@ -42,7 +42,7 @@ final class DetailsViewModel {
         fetchingTask?.cancel()
     }
     
-    func fetchUserTriggered() {
+    func fetchUserDetailsTriggered() {
         fetchUserDetails()
     }
     

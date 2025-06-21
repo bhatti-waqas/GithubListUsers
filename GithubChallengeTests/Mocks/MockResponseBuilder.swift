@@ -1,38 +1,78 @@
 //
 //  MockResponseBuilder.swift
-//  iOSEvaluationTests
+//  GithubChallengeTests
 //
-//  Created by Waqas Naseem on 15/10/2023.
+//  Created by apple on 21/06/2025.
 //
 
 import Foundation
-@testable import iOSEvaluation
+@testable import GithubChallenge
 
 final class MockResponseBuilder {
     
-    static func getMockArticlesResponse() -> ArticleResponse {
+    static func getMockUsersResponse() -> [User] {
         do {
-            let path = Bundle(for: MockResponseBuilder.self).path(forResource: "articles_response", ofType: "json")!
+            let path = Bundle(for: MockResponseBuilder.self).path(forResource: "users_response", ofType: "json")!
             let data = try Data(contentsOf: URL(fileURLWithPath: path))
-            return try JSONDecoder().decode(ArticleResponse.self, from: data)
+            return try JSONDecoder().decode([User].self, from: data)
         } catch {
             fatalError("Error: \(error)")
         }
     }
     
-    static func getMockArticleResponseWithEmptyResults() -> ArticleResponse {
+    static func getMockUsersResponseWithEmptyResults() -> [User] {
         do {
-            let path = Bundle(for: MockResponseBuilder.self).path(forResource: "articles_response_empty", ofType: "json")!
+            let path = Bundle(for: MockResponseBuilder.self).path(forResource: "users_response_empty", ofType: "json")!
             let data = try Data(contentsOf: URL(fileURLWithPath: path))
-            return try JSONDecoder().decode(ArticleResponse.self, from: data)
+            return try JSONDecoder().decode([User].self, from: data)
         } catch {
             fatalError("Error: \(error)")
         }
     }
     
-    static func getMockArticlesData() -> Data {
+    static func getMockUserDetailsResponse() -> User {
         do {
-            let path = Bundle(for: MockResponseBuilder.self).path(forResource: "articles_response", ofType: "json")!
+            let path = Bundle(for: MockResponseBuilder.self).path(forResource: "user_details_response", ofType: "json")!
+            let data = try Data(contentsOf: URL(fileURLWithPath: path))
+            return try JSONDecoder().decode(User.self, from: data)
+        } catch {
+            fatalError("Error: \(error)")
+        }
+    }
+    
+    static func getMockUserReposResponse() -> [Repository] {
+        do {
+            let path = Bundle(for: MockResponseBuilder.self).path(forResource: "user_repos_response", ofType: "json")!
+            let data = try Data(contentsOf: URL(fileURLWithPath: path))
+            return try JSONDecoder().decode([Repository].self, from: data)
+        } catch {
+            fatalError("Error: \(error)")
+        }
+    }
+    
+    static func getMockUsersData() -> Data {
+        do {
+            let path = Bundle(for: MockResponseBuilder.self).path(forResource: "users_response", ofType: "json")!
+            let data = try Data(contentsOf: URL(fileURLWithPath: path))
+            return data
+        } catch {
+            fatalError("Error: \(error)")
+        }
+    }
+    
+    static func getMockUsersDetailsData() -> Data {
+        do {
+            let path = Bundle(for: MockResponseBuilder.self).path(forResource: "user_details_response", ofType: "json")!
+            let data = try Data(contentsOf: URL(fileURLWithPath: path))
+            return data
+        } catch {
+            fatalError("Error: \(error)")
+        }
+    }
+    
+    static func getMockUserReposData() -> Data {
+        do {
+            let path = Bundle(for: MockResponseBuilder.self).path(forResource: "user_repos_response", ofType: "json")!
             let data = try Data(contentsOf: URL(fileURLWithPath: path))
             return data
         } catch {
@@ -41,24 +81,22 @@ final class MockResponseBuilder {
     }
 }
 
-extension ArticleRowViewModel {
-    static func mocked() -> ArticleRowViewModel {
-        .init(article: Article.mocked())
+extension UserRowViewModel {
+    static func mocked() -> UserRowViewModel {
+        .init(with: .mocked())
     }
 }
 
-extension Article {
-    static func mocked() -> Article {
-        .init(id: 0,
-              uri: "",
-              url: "",
-              source: "",
-              publishedDate: "2024-01-05",
-              section: "U.S",
-              nytdSection: "u.s",
-              adxKeywords: "Fourteenth Amendment (US Constitution);Presidential Election of 2024",
-              byline: "By Adam Liptak",
-              type: "Article",
-              title: "title", abstract: "The Colorado Supreme Court", media: [])
+extension User {
+    static func mocked() -> User {
+        .init(id: 1,
+              login: "Bhatti",
+              avatarUrl: "https://avatars.githubusercontent.com/u/5?v=4",
+              reposUrl: "https://api.github.com/users/ezmobius/repos",
+              name: "Waqas Naseem",
+              company: "GitHub",
+              blog: "https://github.com/blog",
+              location: "San Francisco",
+              followers: 100)
     }
 }

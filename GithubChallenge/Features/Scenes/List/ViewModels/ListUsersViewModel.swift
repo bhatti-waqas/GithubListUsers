@@ -52,8 +52,12 @@ private extension ListUsersViewModel {
         fetchingTask = Task { @MainActor in
             do {
                 let users = try await useCase.fetchGithubUsers()
-                userRowViewModels = prepareUsers(users: users)
-                viewState = .showUsers(users: userRowViewModels)
+                if users.isEmpty {
+                    viewState = .showMessageWithTitle(message: StringKey.Error.emptyResultMessage.get())
+                } else {
+                    userRowViewModels = prepareUsers(users: users)
+                    viewState = .showUsers(users: userRowViewModels)
+                }
             } catch {
                 viewState = .showMessageWithTitle(message: error.localizedDescription)
             }

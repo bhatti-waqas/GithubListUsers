@@ -30,16 +30,4 @@ struct User: Decodable {
         case location
         case followers
     }
-    
-    static func mock() -> User {
-        .init(id: 1, 
-              login: "Bhatti",
-              avatarUrl: "https://avatars.githubusercontent.com/u/5?v=4",
-              reposUrl: "https://api.github.com/users/ezmobius/repos",
-              name: "Waqas Naseem",
-              company: "GitHub",
-              blog: "https://github.com/blog",
-              location: "San Francisco",
-              followers: 100)
-    }
 }

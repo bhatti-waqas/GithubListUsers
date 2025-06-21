@@ -29,7 +29,7 @@ final class DetailsViewController: UIViewController {
         ui.layout(in: self)
         configureUI()
         bindViewModel()
-        viewModel.fetchUserTriggered()
+        viewModel.fetchUserDetailsTriggered()
     }
 }
 

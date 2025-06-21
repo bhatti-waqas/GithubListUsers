@@ -6,30 +6,23 @@
 //
 
 import XCTest
+@testable import GithubChallenge
 
 final class ListUsersCoordinatorTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testStart() {
+        // Given
+        let navigationController = AppNavigationController() // Instantiate a mock navigation controller
+        let coordinator = ListUsersCoordinator(rootViewController: navigationController)
+        
+        // When
+        coordinator.start()
+        
+        // Then
+        // Add assertions to verify the expected behavior
+        XCTAssertEqual(navigationController.viewControllers.count, 1, "One view controller should be pushed onto the stack")
+        
+        // Optionally, you can also assert specific properties or behaviors of the created view controller
+        XCTAssertTrue(navigationController.viewControllers.first is ListUsersViewController, "The top view controller should be an instance of the article list view controller")
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }

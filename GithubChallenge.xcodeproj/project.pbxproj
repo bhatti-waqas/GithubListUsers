@@ -11,7 +11,6 @@
 		181F87DC2E00A3AD004FB8EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F87DB2E00A3AD004FB8EF /* SceneDelegate.swift */; };
 		181F87E32E00A3AF004FB8EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181F87E22E00A3AF004FB8EF /* Assets.xcassets */; };
 		181F87E62E00A3AF004FB8EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181F87E42E00A3AF004FB8EF /* LaunchScreen.storyboard */; };
-		181F87F12E00A3AF004FB8EF /* GithubChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F87F02E00A3AF004FB8EF /* GithubChallengeTests.swift */; };
 		185FC7C32E034FB600C0772B /* DetailsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FC7C22E034FB600C0772B /* DetailsUI.swift */; };
 		185FC7C72E03510900C0772B /* DetailsUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FC7C62E03510900C0772B /* DetailsUserCell.swift */; };
 		185FC7C92E03511D00C0772B /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FC7C82E03511D00C0772B /* RepositoryCell.swift */; };
@@ -20,6 +19,24 @@
 		185FC7CF2E04676C00C0772B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FC7CE2E04676C00C0772B /* Repository.swift */; };
 		185FC7D12E04682500C0772B /* RepositoryRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FC7D02E04682500C0772B /* RepositoryRowViewModel.swift */; };
 		185FC7D32E05B65000C0772B /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 185FC7D22E05B65000C0772B /* Localizable.xcstrings */; };
+		185FC7D92E0731C300C0772B /* ListUsersCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FC7D82E0731C300C0772B /* ListUsersCoordinatorTests.swift */; };
+		185FC7E02E0732CE00C0772B /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FC7DF2E0732CE00C0772B /* MockNetworkService.swift */; };
+		185FC7E52E0732DA00C0772B /* users_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 185FC7E32E0732DA00C0772B /* users_response.json */; };
+		185FC7E72E0732E100C0772B /* MockUsersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FC7E62E0732E000C0772B /* MockUsersUseCase.swift */; };
+		185FC7E92E0732EC00C0772B /* MockListUsersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FC7E82E0732EC00C0772B /* MockListUsersCoordinator.swift */; };
+		185FC7EB2E0732F700C0772B /* MockResponseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FC7EA2E0732F600C0772B /* MockResponseBuilder.swift */; };
+		185FC7EE2E073C2600C0772B /* user_details_response_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 185FC7EC2E073C2600C0772B /* user_details_response_empty.json */; };
+		185FC7EF2E073C2600C0772B /* user_details_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 185FC7ED2E073C2600C0772B /* user_details_response.json */; };
+		185FC8142E073D3500C0772B /* users_response_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 185FC8132E073D3500C0772B /* users_response_empty.json */; };
+		185FC8162E073D5500C0772B /* user_repos_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 185FC8152E073D5500C0772B /* user_repos_response.json */; };
+		185FC8322E073D7E00C0772B /* user_repos_response_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 185FC8312E073D7E00C0772B /* user_repos_response_empty.json */; };
+		185FC8342E073F7800C0772B /* XCTestAysncExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FC8332E073F7800C0772B /* XCTestAysncExpectation.swift */; };
+		185FC83A2E07410B00C0772B /* ListUsersViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FC8392E07410B00C0772B /* ListUsersViewModelTests.swift */; };
+		185FC8402E0743E300C0772B /* UserDetailsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FC83E2E0743E300C0772B /* UserDetailsUseCaseTests.swift */; };
+		185FC8412E0743E300C0772B /* GithubUsersUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FC83F2E0743E300C0772B /* GithubUsersUseCaseTests.swift */; };
+		185FC8462E07476400C0772B /* DetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FC8452E07476400C0772B /* DetailsViewModelTests.swift */; };
+		185FC8482E0747CA00C0772B /* MockUserDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FC8472E0747CA00C0772B /* MockUserDetailsUseCase.swift */; };
+		185FC84A2E07489200C0772B /* MockUserDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FC8492E07489200C0772B /* MockUserDetailsCoordinator.swift */; };
 		1871EE7C2E00A44B00BEDD99 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1871EE7B2E00A44B00BEDD99 /* AppCoordinator.swift */; };
 		1871EE7E2E00A45200BEDD99 /* AppServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1871EE7D2E00A45200BEDD99 /* AppServiceLocator.swift */; };
 		1871EE852E00A52500BEDD99 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1871EE842E00A52500BEDD99 /* Strings.swift */; };
@@ -70,7 +87,6 @@
 		181F87E52E00A3AF004FB8EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		181F87E72E00A3AF004FB8EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		181F87EC2E00A3AF004FB8EF /* GithubChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		181F87F02E00A3AF004FB8EF /* GithubChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubChallengeTests.swift; sourceTree = "<group>"; };
 		181F880A2E00A3BD004FB8EF /* Modules */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Modules; path = ../../../../../Downloads/MobileChallange/Modules; sourceTree = "<group>"; };
 		185FC7C22E034FB600C0772B /* DetailsUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsUI.swift; sourceTree = "<group>"; };
 		185FC7C62E03510900C0772B /* DetailsUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsUserCell.swift; sourceTree = "<group>"; };
@@ -80,6 +96,24 @@
 		185FC7CE2E04676C00C0772B /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		185FC7D02E04682500C0772B /* RepositoryRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRowViewModel.swift; sourceTree = "<group>"; };
 		185FC7D22E05B65000C0772B /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		185FC7D82E0731C300C0772B /* ListUsersCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUsersCoordinatorTests.swift; sourceTree = "<group>"; };
+		185FC7DF2E0732CE00C0772B /* MockNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
+		185FC7E32E0732DA00C0772B /* users_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users_response.json; sourceTree = "<group>"; };
+		185FC7E62E0732E000C0772B /* MockUsersUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockUsersUseCase.swift; sourceTree = "<group>"; };
+		185FC7E82E0732EC00C0772B /* MockListUsersCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockListUsersCoordinator.swift; sourceTree = "<group>"; };
+		185FC7EA2E0732F600C0772B /* MockResponseBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockResponseBuilder.swift; sourceTree = "<group>"; };
+		185FC7EC2E073C2600C0772B /* user_details_response_empty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user_details_response_empty.json; sourceTree = "<group>"; };
+		185FC7ED2E073C2600C0772B /* user_details_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user_details_response.json; sourceTree = "<group>"; };
+		185FC8132E073D3500C0772B /* users_response_empty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users_response_empty.json; sourceTree = "<group>"; };
+		185FC8152E073D5500C0772B /* user_repos_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user_repos_response.json; sourceTree = "<group>"; };
+		185FC8312E073D7E00C0772B /* user_repos_response_empty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user_repos_response_empty.json; sourceTree = "<group>"; };
+		185FC8332E073F7800C0772B /* XCTestAysncExpectation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestAysncExpectation.swift; sourceTree = "<group>"; };
+		185FC8392E07410B00C0772B /* ListUsersViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUsersViewModelTests.swift; sourceTree = "<group>"; };
+		185FC83E2E0743E300C0772B /* UserDetailsUseCaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsUseCaseTests.swift; sourceTree = "<group>"; };
+		185FC83F2E0743E300C0772B /* GithubUsersUseCaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubUsersUseCaseTests.swift; sourceTree = "<group>"; };
+		185FC8452E07476400C0772B /* DetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModelTests.swift; sourceTree = "<group>"; };
+		185FC8472E0747CA00C0772B /* MockUserDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDetailsUseCase.swift; sourceTree = "<group>"; };
+		185FC8492E07489200C0772B /* MockUserDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDetailsCoordinator.swift; sourceTree = "<group>"; };
 		1871EE7B2E00A44B00BEDD99 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		1871EE7D2E00A45200BEDD99 /* AppServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppServiceLocator.swift; sourceTree = "<group>"; };
 		1871EE842E00A52500BEDD99 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -167,7 +201,11 @@
 		181F87EF2E00A3AF004FB8EF /* GithubChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				181F87F02E00A3AF004FB8EF /* GithubChallengeTests.swift */,
+				185FC83D2E0743E300C0772B /* UseCases */,
+				185FC8382E0740E800C0772B /* ViewModels */,
+				185FC7D52E07316F00C0772B /* Coordinator */,
+				185FC7DD2E0732B000C0772B /* Mocks */,
+				185FC8332E073F7800C0772B /* XCTestAysncExpectation.swift */,
 			);
 			path = GithubChallengeTests;
 			sourceTree = "<group>";
@@ -197,6 +235,67 @@
 				185FC7C82E03511D00C0772B /* RepositoryCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		185FC7D52E07316F00C0772B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				185FC7D82E0731C300C0772B /* ListUsersCoordinatorTests.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		185FC7DD2E0732B000C0772B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				185FC7EA2E0732F600C0772B /* MockResponseBuilder.swift */,
+				185FC7E82E0732EC00C0772B /* MockListUsersCoordinator.swift */,
+				185FC7E62E0732E000C0772B /* MockUsersUseCase.swift */,
+				185FC7E12E0732DA00C0772B /* Responses */,
+				185FC7DE2E0732CE00C0772B /* NetworkService */,
+				185FC8472E0747CA00C0772B /* MockUserDetailsUseCase.swift */,
+				185FC8492E07489200C0772B /* MockUserDetailsCoordinator.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		185FC7DE2E0732CE00C0772B /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				185FC7DF2E0732CE00C0772B /* MockNetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		185FC7E12E0732DA00C0772B /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				185FC8312E073D7E00C0772B /* user_repos_response_empty.json */,
+				185FC8152E073D5500C0772B /* user_repos_response.json */,
+				185FC8132E073D3500C0772B /* users_response_empty.json */,
+				185FC7EC2E073C2600C0772B /* user_details_response_empty.json */,
+				185FC7ED2E073C2600C0772B /* user_details_response.json */,
+				185FC7E32E0732DA00C0772B /* users_response.json */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		185FC8382E0740E800C0772B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				185FC8392E07410B00C0772B /* ListUsersViewModelTests.swift */,
+				185FC8452E07476400C0772B /* DetailsViewModelTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		185FC83D2E0743E300C0772B /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				185FC83E2E0743E300C0772B /* UserDetailsUseCaseTests.swift */,
+				185FC83F2E0743E300C0772B /* GithubUsersUseCaseTests.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 		1871EE762E00A3E900BEDD99 /* AppRoot */ = {
@@ -402,6 +501,7 @@
 				181F87D22E00A3AD004FB8EF /* Sources */,
 				181F87D32E00A3AD004FB8EF /* Frameworks */,
 				181F87D42E00A3AD004FB8EF /* Resources */,
+				185FC7D42E07086700C0772B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -454,6 +554,7 @@
 					};
 					181F87EB2E00A3AF004FB8EF = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 						TestTargetID = 181F87D52E00A3AD004FB8EF;
 					};
 				};
@@ -497,10 +598,37 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185FC7EF2E073C2600C0772B /* user_details_response.json in Resources */,
+				185FC8322E073D7E00C0772B /* user_repos_response_empty.json in Resources */,
+				185FC8162E073D5500C0772B /* user_repos_response.json in Resources */,
+				185FC7EE2E073C2600C0772B /* user_details_response_empty.json in Resources */,
+				185FC7E52E0732DA00C0772B /* users_response.json in Resources */,
+				185FC8142E073D3500C0772B /* users_response_empty.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		185FC7D42E07086700C0772B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\nif [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		181F87D22E00A3AD004FB8EF /* Sources */ = {
@@ -546,7 +674,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				181F87F12E00A3AF004FB8EF /* GithubChallengeTests.swift in Sources */,
+				185FC84A2E07489200C0772B /* MockUserDetailsCoordinator.swift in Sources */,
+				185FC7E92E0732EC00C0772B /* MockListUsersCoordinator.swift in Sources */,
+				185FC8402E0743E300C0772B /* UserDetailsUseCaseTests.swift in Sources */,
+				185FC7E02E0732CE00C0772B /* MockNetworkService.swift in Sources */,
+				185FC7D92E0731C300C0772B /* ListUsersCoordinatorTests.swift in Sources */,
+				185FC8342E073F7800C0772B /* XCTestAysncExpectation.swift in Sources */,
+				185FC8412E0743E300C0772B /* GithubUsersUseCaseTests.swift in Sources */,
+				185FC7E72E0732E100C0772B /* MockUsersUseCase.swift in Sources */,
+				185FC8462E07476400C0772B /* DetailsViewModelTests.swift in Sources */,
+				185FC8482E0747CA00C0772B /* MockUserDetailsUseCase.swift in Sources */,
+				185FC83A2E07410B00C0772B /* ListUsersViewModelTests.swift in Sources */,
+				185FC7EB2E0732F700C0772B /* MockResponseBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,7 +748,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -672,7 +811,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -750,6 +889,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -758,6 +898,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = none.GithubChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GithubChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GithubChallenge";
@@ -769,6 +910,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
