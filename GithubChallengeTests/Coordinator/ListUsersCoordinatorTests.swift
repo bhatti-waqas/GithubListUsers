@@ -23,6 +23,6 @@ final class ListUsersCoordinatorTests: XCTestCase {
         XCTAssertEqual(navigationController.viewControllers.count, 1, "One view controller should be pushed onto the stack")
         
         // Optionally, you can also assert specific properties or behaviors of the created view controller
-        XCTAssertTrue(navigationController.viewControllers.first is ListUsersViewController, "The top view controller should be an instance of the article list view controller")
+        XCTAssertTrue(navigationController.viewControllers.first is ListUsersViewController, "The top view controller should be an instance of the Users list view controller")
     }
 }

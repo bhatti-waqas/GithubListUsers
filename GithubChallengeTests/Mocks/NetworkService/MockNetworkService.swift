@@ -1,6 +1,6 @@
 //
 //  MockNetworkService.swift
-//  iOSEvaluationTests
+//  GithubChallengeTests
 //
 //  Created by Waqas Naseem on 10/01/2024.
 //

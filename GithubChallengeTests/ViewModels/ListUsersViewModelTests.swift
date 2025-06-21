@@ -92,7 +92,7 @@ final class ListUsersViewModelTests: XCTestCase {
         let mockUsersResponse = MockResponseBuilder.getMockUsersResponse()
         sut.userRowViewModels = mockUsersResponse.map { UserRowViewModel(with: $0) }
         
-        // When: Trigger the showArticleDetails method
+        // When: Trigger the showUserDetails method
         sut.showDetails(at: 0)
         
         XCTExpect(toEventually: mockCoordinator.showDetailsInvoked)
